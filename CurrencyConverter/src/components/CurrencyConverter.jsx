@@ -119,7 +119,7 @@ const CurrencyConverter = () => {
         <h2 className="text-sm">Real-time exchange rates</h2>
       </div>
       <div className="border md:max-w-5xl mx-auto md:border-black " >
-        <div className="border flex md:mx-5 md:my-4 justify-between sm:flex-col md:flex-row">
+        <div className="border  md:mx-5 md:my-4 justify-between sm:flex-col">
           <div className="mx-auto md:mx-4 md:bg-blue-200 md:my-8 w-96 h-80 rounded-xl px-5 py-6">
             <div className="flex justify-between mx-3">
               <div className="inline-block">
