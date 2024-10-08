@@ -119,8 +119,8 @@ const CurrencyConverter = () => {
         <h2 className="text-sm">Real-time exchange rates</h2>
       </div>
       <div className="border md:max-w-5xl mx-auto md:border-black " >
-        <div className="border  md:mx-5 md:my-4 justify-between sm:flex-col">
-          <div className="mx-auto md:mx-4 md:bg-blue-200 md:my-8 w-96 h-80 rounded-xl px-5 py-6">
+        <div className="border  md:mx-5 md:my-4 justify-between flex-col w-au">
+          <div className="m-auto md:mx-4 md:bg-blue-200 md:my-8 w-96 h-80 rounded-xl px-5 py-6">
             <div className="flex justify-between mx-3">
               <div className="inline-block">
                 <CurrencyDropdown currencies={currencies} 
@@ -144,7 +144,7 @@ const CurrencyConverter = () => {
             <input
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            type="number" className="block w-80 h-8 rounded-md mx-auto pl-3 sm:bg-blue-200 sm:h-10 md:bg-white"  />
+            type="number" className="block w-80 h-8 rounded-md mx-auto pl-3 bg-blue-200 sm:h-10 md:bg-white"  />
 
 
             <button
@@ -154,7 +154,7 @@ const CurrencyConverter = () => {
             >Convert
             </button>
           </div>
-          <div className="mx-auto md:mx-4 bg-blue-200 md:my-8 md:w-5/6 h-auto rounded-xl px-5 py-6 sm:w-auto sm:my-10">
+          <div className="mx-auto md:mx-4 bg-blue-200 md:my-8 md:w-5/6 h-auto rounded-xl px-5 py-6 sm:w-auto sm:my-10 sm:mx-5">
             <h1>Converted Amount:</h1>
             {convertedAmount && (<p className=" text-xl font-bold text-blue-600">{convertedAmount}</p>)}
             <h1 className="text-blue-700 font-bold">Exchange Rate:1 {fromCurrency} = {(exchangeRate/amount).toFixed(4)} {toCurrency}</h1>
