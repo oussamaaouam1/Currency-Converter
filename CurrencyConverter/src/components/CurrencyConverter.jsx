@@ -75,7 +75,7 @@ const CurrencyConverter = () => {
   });
 
   const formatDate = (date) => {
-    return date.toISOString().split('T')[0];
+    return date.toISOString().split('T')[0]; //split the date and the time from th 'T'
   };
 
   const getRecentMonthDates = () => {
@@ -112,9 +112,10 @@ const CurrencyConverter = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[fromCurrency, toCurrency])
 
+
   return (
     <div>
-      <div  className="bg-blue-300 md:max-w-5xl h-24  px-2 py-4  mx-auto p-4 sm:mx-5 md:mx-20 lg:mx-auto sm:rounded-lg md:rounded-none border-solid lg:border-black border">
+      <div  className="bg-blue-300 sm:max-w-5xl h-24  px-2 py-4 mx-auto p-4 sm:mx-5 md:mx-20 lg:mx-auto sm:rounded-lg md:rounded-none border-solid lg:border-black border">
         <h1 className="text-2xl">Currency Converter</h1>
         <h2 className="text-sm">Real-time exchange rates</h2>
       </div>
@@ -154,10 +155,10 @@ const CurrencyConverter = () => {
             >Convert
             </button>
           </div>
-          <div className="mx-auto md:mx-4 bg-blue-200 md:my-8 md:w-5/6 h-auto rounded-xl px-5 py-6 sm:w-auto sm:my-10 sm:mx-5">
+          <div className=" md:mx-5 bg-blue-200 md:my-8 md:w-5/6 h-auto rounded-xl px-5 py-6 sm:w-auto sm:my-10 mx-5 ">
             <h1>Converted Amount:</h1>
             {convertedAmount && (<p className=" text-xl font-bold text-blue-600">{convertedAmount}</p>)}
-            <h1 className="text-blue-700 font-bold">Exchange Rate:1 {fromCurrency} = {(exchangeRate/amount).toFixed(4)} {toCurrency}</h1>
+            <h1 className="text-blue-700 font-bold">Exchange Rate:1  {fromCurrency} = {(exchangeRate/amount).toFixed(4)} {toCurrency}</h1>
             <p>Last Update : <span>{updatingDate}</span></p>
             <div>
               <h1>Historical Trend (<span className="font-bold">Last month </span>)</h1>
