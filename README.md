@@ -1,1 +1,2 @@
 # Currency-Converter
+this is a currency converter UI can give the last updates of currencies changes retrieving the data from frnakfurter API and can display a simple line chart using chartjs to preview the changes of the last month for an currency over an other one from the currencies list available 
